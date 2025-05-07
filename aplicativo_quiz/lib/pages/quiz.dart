@@ -25,24 +25,86 @@ class _QuizState extends State<Quiz> {
             ),
           ),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromRGBO(28, 99, 156, 1),
+        body: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Text('Pergunta 1 de 10',
+                   style: TextStyle( fontSize: 20),
+                   
+                   ),
                 ),
-                child: Text(
-                  'Iniciar',
-                  style: TextStyle(fontSize: 43, color: Colors.white),
+          
+                Text('Pergunta', style: TextStyle( fontSize: 20),
                 ),
-
-                onPressed: () {
-                  print('Clicou Iniciar');
-                },
-              ),
-            ],
+                
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size.fromHeight(60),
+                    padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                    backgroundColor: Color.fromRGBO(28, 99, 156, 1),
+                  ),
+                  child: Text(
+                    'Resposta 1',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+          
+                  onPressed: () {
+                    print('Clicou Resposta 1');
+                  },
+                ),
+          
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                    backgroundColor: Color.fromRGBO(28, 99, 156, 1),
+                  ),
+                  child: Text(
+                    'Resposta 2',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+          
+                  onPressed: () {
+                    print('Clicou Resposta 2');
+                  },
+                ),
+          
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                    backgroundColor: Color.fromRGBO(28, 99, 156, 1),
+                  ),
+                  child: Text(
+                    'Resposta 3',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+          
+                  onPressed: () {
+                    print('Clicou Resposta 3');
+                  },
+                ),
+          
+          
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                    backgroundColor: Color.fromRGBO(28, 99, 156, 1),
+                  ),
+                  child: Text(
+                    'Resposta 4',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+          
+                  onPressed: () {
+                    print('Clicou Resposta  4');
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),
