@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class Quiz extends StatefulWidget {
+  const Quiz({super.key});
 
+  @override
+  State<Quiz> createState() => _QuizState();
+}
+
+class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,7 +29,6 @@ class HomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image.asset('assets/image/logo.png', width: 300),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color.fromRGBO(28, 99, 156, 1),
@@ -42,6 +46,6 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-    );
+      );
   }
 }
