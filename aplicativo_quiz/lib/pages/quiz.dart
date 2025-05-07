@@ -10,6 +10,32 @@ class Quiz extends StatefulWidget {
 class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
+
+  List quiz = [
+    {
+      "Pergunta": "Qual comando usado para criar um novo projeto Flutter?",
+      "Alternativas": [
+        "Flutter start",
+        "Flutter new",
+        "Flutter create",
+        "flutter init"
+      ],
+      "Alternativa_correta": 3,
+    }
+  ];
+
+
+
+
+
+
+
+
+
+
+
+
+
     return MaterialApp(
       theme: ThemeData(
         appBarTheme: AppBarTheme(color: const Color.fromARGB(255, 5, 104, 185)),
@@ -17,19 +43,22 @@ class _QuizState extends State<Quiz> {
       ),
       home: Scaffold(
         appBar: AppBar(
+          toolbarHeight: 33,
           title: Center(
-            child: Text(
-              'Meu app',
-              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+              child: Text(
+                'Quiz Dart e Flutter',
+                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,),
+              ),
             ),
+            
           ),
         ),
         body: Padding(
-          padding: const EdgeInsets.all(12),
-          child: Center(
+          padding: const EdgeInsets.all(12.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Align(
                   alignment: Alignment.topRight,
@@ -44,7 +73,6 @@ class _QuizState extends State<Quiz> {
                 
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    fixedSize: Size.fromHeight(60),
                     padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
                     backgroundColor: Color.fromRGBO(28, 99, 156, 1),
                   ),
@@ -105,7 +133,7 @@ class _QuizState extends State<Quiz> {
                 ),
               ],
             ),
-          ),
+          
         ),
       ),
       );
