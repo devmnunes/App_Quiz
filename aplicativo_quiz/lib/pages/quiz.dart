@@ -8,26 +8,28 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
+  int perguntaNumero = 1;
+  int acertos = 0;
+  int erros = 0;
+
   @override
   Widget build(BuildContext context) {
+    List quiz = [
+      {
+        "Pergunta": "Qual comando usado para criar um novo projeto Flutter?",
 
-  List quiz = [
-    {
-      "Pergunta": "Qual comando usado para criar um novo projeto Flutter?",
+        "Alternativas": [
+          "Flutter start",
+          "Flutter new",
+          "Flutter create",
+          "flutter init",
+        ],
 
-      "Alternativas": [
-        "Flutter start",
-        "Flutter new",
-        "Flutter create",
-        "flutter init",
-      ],
+        "Alternativa_correta": 3,
+      },
+    ];
 
-      "Alternativa_correta": 3,
-    } 
-  ];
-
-  quiz.add(
-    {
+    quiz.add({
       "Pergunta": "O Flutter é:",
 
       "Alternativas": [
@@ -38,44 +40,46 @@ class _QuizState extends State<Quiz> {
       ],
 
       "Alternativa_correta": 1,
-    } 
-  );
+    });
 
- quiz.add(
-    {
-      "Pergunta": "Qual Widget é usado para fazer uma rolagem vertical em Flutter:",
+    quiz.add({
+      "Pergunta":
+          "Qual Widget é usado para fazer uma rolagem vertical em Flutter:",
 
-      "Alternativas": [
-        "Container",
-        "Column",
-        "ListView",
-        "Row",
-      ],
+      "Alternativas": ["Container", "Column", "ListView", "Row"],
 
       "Alternativa_correta": 4,
-    } 
-  );
+    });
 
-  quiz.add(
-    {
+    quiz.add({
       "Pergunta": "Dart é uma linguagem de programação criada por",
 
-      "Alternativas": [
-        "Oracle",
-        "Microsoft",
-        "Google",
-        "Facebook",
-      ],
+      "Alternativas": ["Oracle", "Microsoft", "Google", "Facebook"],
 
       "Alternativa_correta": 3,
-    } 
-  );
-  print('Dados do Quiz');
-  print(quiz);
+    });
+    print('Dados do Quiz');
 
-  int perguntaNumero = 1;
+    /* void respondeu(int respostaNumero) {
+      setState(() {
+        if (quiz[perguntaNumero - 1]['Alternativa_correta'] == respostaNumero) {
+          print('Acertou');
+          acertos++;
+        } else {
+          print('Errou');
+          erros++;
+        }
 
-  
+        print('acertos totais: $acertos \n erros totais: $erros');
+
+        if (perguntaNumero == 10) {
+          print('Terminou o quiz');
+        } else {
+          perguntaNumero++;
+        }
+      });
+    } */
+
     return MaterialApp(
       theme: ThemeData(
         appBarTheme: AppBarTheme(color: const Color.fromARGB(255, 5, 104, 185)),
@@ -89,106 +93,107 @@ class _QuizState extends State<Quiz> {
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
               child: Text(
                 'Quiz Dart e Flutter',
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-            
           ),
         ),
         body: Padding(
           padding: const EdgeInsets.all(12.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Align(
-                  alignment: Alignment.topRight,
-                  child: Text('Pergunta $perguntaNumero de 10',
-                   style: TextStyle( fontSize: 20),
-                   
-                   ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Align(
+                alignment: Alignment.topRight,
+                child: Text(
+                  'Pergunta $perguntaNumero de 10',
+                  style: TextStyle(fontSize: 20),
                 ),
-          
-                Text( quiz[perguntaNumero - 1] ["Pergunta"]
-                , style: TextStyle( fontSize: 20),
-                ),
-                
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
-                      backgroundColor: Color.fromRGBO(28, 99, 156, 1),
-                    ),
-                    child: Text(
-                       quiz[perguntaNumero - 1] ["Alternativas"] [0],
-                      style: TextStyle(fontSize: 20, color: Colors.white),
-                    ),
-                            
-                    onPressed: () {
-                      print('Clicou Resposta 1');
-                    },
+              ),
+
+              Text(
+                quiz[perguntaNumero - 1]["Pergunta"],
+                style: TextStyle(fontSize: 20),
+              ),
+
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                    backgroundColor: Color.fromRGBO(28, 99, 156, 1),
                   ),
-                ),
-          
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
-                      backgroundColor: Color.fromRGBO(28, 99, 156, 1),
-                    ),
-                    child: Text(
-                      quiz[perguntaNumero - 1] ["Alternativas"] [1],
-                      style: TextStyle(fontSize: 20, color: Colors.white),
-                    ),
-                            
-                    onPressed: () {
-                      print('Clicou Resposta 2');
-                    },
+                  child: Text(
+                    quiz[perguntaNumero - 1]["Alternativas"][0],
+                    style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
+
+                  onPressed: () {
+                    print('Clicou Resposta 1');
+                  },
                 ),
-          
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
-                      backgroundColor: Color.fromRGBO(28, 99, 156, 1),
-                    ),
-                    child: Text(
-                      quiz[perguntaNumero - 1] ["Alternativas"] [2],
-                      style: TextStyle(fontSize: 20, color: Colors.white),
-                    ),
-                            
-                    onPressed: () {
-                      print('Clicou Resposta 3');
-                    },
+              ),
+
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                    backgroundColor: Color.fromRGBO(28, 99, 156, 1),
                   ),
-                ),
-          
-          
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
-                      backgroundColor: Color.fromRGBO(28, 99, 156, 1),
-                    ),
-                    child: Text(
-                      quiz[perguntaNumero - 1] ["Alternativas"] [3],
-                      style: TextStyle(fontSize: 20, color: Colors.white),
-                    ),
-                            
-                    onPressed: () {
-                      print('Clicou Resposta  4');
-                    },
+                  child: Text(
+                    quiz[perguntaNumero - 1]["Alternativas"][1],
+                    style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
+
+                  onPressed: () {
+                    print('Clicou Resposta 2');
+                  },
                 ),
-              ],
-            ),
-          
+              ),
+
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                    backgroundColor: Color.fromRGBO(28, 99, 156, 1),
+                  ),
+                  child: Text(
+                    quiz[perguntaNumero - 1]["Alternativas"][2],
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+
+                  onPressed: () {
+                    print('Clicou Resposta 3');
+                  },
+                ),
+              ),
+
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                    backgroundColor: Color.fromRGBO(28, 99, 156, 1),
+                  ),
+                  child: Text(
+                    quiz[perguntaNumero - 1]["Alternativas"][3],
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+
+                  onPressed: () {
+                    print('Clicou Resposta  4');
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
       ),
-      );
+    );
   }
 }

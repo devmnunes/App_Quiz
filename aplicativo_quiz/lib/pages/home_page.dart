@@ -15,8 +15,10 @@ class HomePage extends StatelessWidget {
           title: Center(
             child: Text(
               'Meu app',
-              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
@@ -35,7 +37,7 @@ class HomePage extends StatelessWidget {
                 ),
 
                 onPressed: () {
-                  print('Clicou Iniciar');
+                  Navigator.pushNamed(context, 'Quiz');
                 },
               ),
             ],
