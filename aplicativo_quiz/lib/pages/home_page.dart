@@ -38,6 +38,10 @@ class HomePage extends StatelessWidget {
 
                 onPressed: () {
                   Navigator.pushNamed(context, 'Quiz');
+<<<<<<< Updated upstream
+=======
+                  print('Clicou Iniciar');
+>>>>>>> Stashed changes
                 },
               ),
             ],
