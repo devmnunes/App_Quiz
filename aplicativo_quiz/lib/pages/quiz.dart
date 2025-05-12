@@ -16,11 +16,27 @@ class _QuizState extends State<Quiz> {
 
   @override
   Widget build(BuildContext context) {
-  
+    quiz.shuffle();
 
-    print('Dados do Quiz');
+    quiz.forEach((elemento) {
+      int alternativaCorreta = elemento['Alternativa_correta'];
+      List resposta = elemento['Alternativas'];
 
-     void respondeu(int respostaNumero) {
+      String respostaCorreta = elemento['Alternativas'][alternativaCorreta - 1];
+
+      resposta.shuffle();
+
+      int i = 1;
+      resposta.forEach((elemento) {
+        print(elemento);
+        if (elemento == respostaCorreta) {
+          alternativaCorreta = i;
+        }
+        i++;  
+      });
+      elemento["Alternativa_correta"] = alternativaCorreta;
+    });
+    void respondeu(int respostaNumero) {
       setState(() {
         if (quiz[perguntaNumero - 1]["Alternativa_correta"] == respostaNumero) {
           print('Acertou');
@@ -34,12 +50,16 @@ class _QuizState extends State<Quiz> {
 
         if (perguntaNumero == 10) {
           print('Terminou o quiz');
-          Navigator.pushNamed(context, 'Resultado', arguments: Argumentos(acertos));
+          Navigator.pushNamed(
+            context,
+            'Resultado',
+            arguments: Argumentos(acertos),
+          );
         } else {
           perguntaNumero++;
         }
       });
-    } 
+    }
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
