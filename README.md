@@ -11,3 +11,7 @@ Versão Android - ^15.0
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1c212a27-af1f-4445-bbff-e89a6cf35522" alt="Logo" width="300"/>
 </p>
+
+3. Teste aplicativo
+   
+[https://github.com/user-attachments/assets/3d32a25e-0c2a-405b-9b85-bc5041c5f243](https://github.com/devmnunes/App_Quiz/issues/2)
