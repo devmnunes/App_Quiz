@@ -6,6 +6,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: AppBarTheme(color: const Color.fromARGB(255, 5, 104, 185)),
         scaffoldBackgroundColor: const Color.fromARGB(221, 226, 236, 236),
@@ -38,10 +39,6 @@ class HomePage extends StatelessWidget {
 
                 onPressed: () {
                   Navigator.pushNamed(context, 'Quiz');
-<<<<<<< Updated upstream
-=======
-                  print('Clicou Iniciar');
->>>>>>> Stashed changes
                 },
               ),
             ],

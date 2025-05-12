@@ -86,7 +86,6 @@ class _QuizState extends State<Quiz> {
                 height: 55,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
                     backgroundColor: Color.fromRGBO(28, 99, 156, 1),
                   ),
                   child: Text(
@@ -125,7 +124,6 @@ class _QuizState extends State<Quiz> {
                 height: 55,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
                     backgroundColor: Color.fromRGBO(28, 99, 156, 1),
                   ),
                   child: Text(
@@ -145,7 +143,6 @@ class _QuizState extends State<Quiz> {
                 height: 55,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
                     backgroundColor: Color.fromRGBO(28, 99, 156, 1),
                   ),
                   child: Text(

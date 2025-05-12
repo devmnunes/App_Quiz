@@ -36,7 +36,7 @@
     },
 
     {
-      "Pergunta": "Dart é uma linguagem de programação criada por",
+      "Pergunta": "Dart é uma linguagem de programação criada por:",
 
       "Alternativas": [
         "Oracle", 
