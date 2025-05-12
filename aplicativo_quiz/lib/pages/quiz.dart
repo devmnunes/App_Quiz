@@ -1,4 +1,6 @@
+import 'package:aplicativo_quiz/pages/resultado.dart';
 import 'package:flutter/material.dart';
+import 'package:aplicativo_quiz/quiz_dados.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
@@ -14,55 +16,13 @@ class _QuizState extends State<Quiz> {
 
   @override
   Widget build(BuildContext context) {
-    List quiz = [
-      {
-        "Pergunta": "Qual comando usado para criar um novo projeto Flutter?",
+  
 
-        "Alternativas": [
-          "Flutter start",
-          "Flutter new",
-          "Flutter create",
-          "flutter init",
-        ],
-
-        "Alternativa_correta": 3,
-      },
-    ];
-
-    quiz.add({
-      "Pergunta": "O Flutter é:",
-
-      "Alternativas": [
-        "Um SDK para criação de interfaces nativas para IOS e Android",
-        "Uma linguagem de Programação",
-        "Um aplicativo",
-        "Um SGBD",
-      ],
-
-      "Alternativa_correta": 1,
-    });
-
-    quiz.add({
-      "Pergunta":
-          "Qual Widget é usado para fazer uma rolagem vertical em Flutter:",
-
-      "Alternativas": ["Container", "Column", "ListView", "Row"],
-
-      "Alternativa_correta": 4,
-    });
-
-    quiz.add({
-      "Pergunta": "Dart é uma linguagem de programação criada por",
-
-      "Alternativas": ["Oracle", "Microsoft", "Google", "Facebook"],
-
-      "Alternativa_correta": 3,
-    });
     print('Dados do Quiz');
 
-    /* void respondeu(int respostaNumero) {
+     void respondeu(int respostaNumero) {
       setState(() {
-        if (quiz[perguntaNumero - 1]['Alternativa_correta'] == respostaNumero) {
+        if (quiz[perguntaNumero - 1]["Alternativa_correta"] == respostaNumero) {
           print('Acertou');
           acertos++;
         } else {
@@ -74,13 +34,15 @@ class _QuizState extends State<Quiz> {
 
         if (perguntaNumero == 10) {
           print('Terminou o quiz');
+          Navigator.pushNamed(context, 'Resultado', arguments: Argumentos(acertos));
         } else {
           perguntaNumero++;
         }
       });
-    } */
+    } 
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: AppBarTheme(color: const Color.fromARGB(255, 5, 104, 185)),
         scaffoldBackgroundColor: const Color.fromARGB(221, 226, 236, 236),
@@ -121,6 +83,7 @@ class _QuizState extends State<Quiz> {
 
               SizedBox(
                 width: double.infinity,
+                height: 55,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
@@ -133,15 +96,16 @@ class _QuizState extends State<Quiz> {
 
                   onPressed: () {
                     print('Clicou Resposta 1');
+                    respondeu(1);
                   },
                 ),
               ),
 
               SizedBox(
                 width: double.infinity,
+                height: 55,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
                     backgroundColor: Color.fromRGBO(28, 99, 156, 1),
                   ),
                   child: Text(
@@ -151,12 +115,14 @@ class _QuizState extends State<Quiz> {
 
                   onPressed: () {
                     print('Clicou Resposta 2');
+                    respondeu(2);
                   },
                 ),
               ),
 
               SizedBox(
                 width: double.infinity,
+                height: 55,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
@@ -169,12 +135,14 @@ class _QuizState extends State<Quiz> {
 
                   onPressed: () {
                     print('Clicou Resposta 3');
+                    respondeu(3);
                   },
                 ),
               ),
 
               SizedBox(
                 width: double.infinity,
+                height: 55,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
@@ -187,6 +155,7 @@ class _QuizState extends State<Quiz> {
 
                   onPressed: () {
                     print('Clicou Resposta  4');
+                    respondeu(4);
                   },
                 ),
               ),

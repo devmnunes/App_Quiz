@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/' : (context) => HomePage(),
         'Quiz' : (context) => Quiz(),
-        'Resultado' : (context) => Resultado(),
+        Resultado.routeName : (context) => Resultado(),
       },
     );
   }
