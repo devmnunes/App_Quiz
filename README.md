@@ -1,5 +1,7 @@
 # App_Quiz
-Aplicativo criado usando a linguagem de programação Dart e o Framework Flutter, para fins de estudo e aprendizagem.App criado 
+Aplicativo criado usando a linguagem de programação Dart e o Framework Flutter, para fins de estudo e aprendizagem.
+
+O principal objetivo foi colocar em pratica tudo que venho aprendendo e mostrar que consigo desenvolver soluções completas com responsabilidade, organização, foco e boas praticas.
 
 Versão Android - ^15.0
 
