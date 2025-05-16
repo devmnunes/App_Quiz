@@ -1,5 +1,7 @@
 # App_Quiz
-Aplicativo criado usando a linguagem de programação Dart e o Framework Flutter, para fins de estudo e aprendizagem.App criado 
+Aplicativo criado usando a linguagem de programação Dart e o Framework Flutter, para fins de estudo e aprendizagem.
+
+O principal objetivo foi colocar em pratica tudo que venho aprendendo e mostrar que consigo desenvolver soluções completas com responsabilidade, organização, foco e boas praticas.
 
 Versão Android - ^15.0
 
@@ -12,6 +14,18 @@ Versão Android - ^15.0
   <img src="https://github.com/user-attachments/assets/1c212a27-af1f-4445-bbff-e89a6cf35522" alt="Logo" width="300"/>
 </p>
 
-3. Teste aplicativo
+3. Quiz
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d70c031d-7483-4d6e-8e11-c9d01b177892" alt="Quiz" width="300"/>
+</p>
+
+4. Resultado
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/409b0e91-5fa0-4acb-9edf-17df7d779e9c" alt="Resultado" width="300"/>
+</p>
+
+5. Teste aplicativo
    
-[https://github.com/user-attachments/assets/3d32a25e-0c2a-405b-9b85-bc5041c5f243](https://github.com/devmnunes/App_Quiz/issues/2)
+https://github.com/user-attachments/assets/3d32a25e-0c2a-405b-9b85-bc5041c5f243
