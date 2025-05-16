@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Center(
             child: Text(
-              'Meu app',
+              'Quiz Dart e Flutter',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
