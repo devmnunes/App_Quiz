@@ -1,3 +1,4 @@
+import 'package:aplicativo_quiz/domain/quiz_logic.dart';
 import 'package:aplicativo_quiz/pages/home_page.dart';
 import 'package:aplicativo_quiz/pages/quiz.dart';
 import 'package:aplicativo_quiz/pages/resultado.dart';
